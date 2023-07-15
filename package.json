@@ -1,0 +1,8 @@
+{
+  "name": "mistrade_js_tasks",
+  "description": "Репозиторий с задачами по JS",
+  "version": "1.0.0",
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}

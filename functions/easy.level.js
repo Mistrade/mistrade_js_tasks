@@ -4,20 +4,35 @@
  * @return {string} - строковое значение типа данных для аргумента value
  */
 function getDataType(value) {
-    "use strict"
-    // код функции
+  'use strict';
+  // код функции
 }
 
-console.log('-----Результаты тест кейсов по задаче 1:')
-console.log("22 это число: ", getDataType(22) === 'number') // true
-console.log("\'Hello, World!\' это строка: ", getDataType('Hello, world!') === 'string') // true
-console.log("true это логическое значение: ", getDataType(true) === 'boolean') // true
-console.log("typeof null это не null: ", getDataType(null) !== 'null') //true
-console.log("typeof null это object (т.к. это баг JS): ", getDataType(null) === 'object') //true
-console.log("тип анонимной функции это function: ", getDataType(function () {
-}) === 'function') //true
-console.log("typeof {country: \'Russia\'} это object: ", getDataType({country: "Russia"}) === 'object') //  true
-console.log("typeof undefined это undefined: ", getDataType(undefined) === 'undefined') // true
+//тест кейсы к задаче 1
+console.log('-----Результаты тест кейсов по задаче 1:');
+console.log('22 это число: ', getDataType(22) === 'number'); // true
+console.log(
+  "'Hello, World!' это строка: ",
+  getDataType('Hello, world!') === 'string'
+); // true
+console.log('true это логическое значение: ', getDataType(true) === 'boolean'); // true
+console.log('typeof null это не null: ', getDataType(null) !== 'null'); //true
+console.log(
+  'typeof null это object (т.к. это баг JS): ',
+  getDataType(null) === 'object'
+); //true
+console.log(
+  'тип анонимной функции это function: ',
+  getDataType(function () {}) === 'function'
+); //true
+console.log(
+  "typeof {country: 'Russia'} это object: ",
+  getDataType({ country: 'Russia' }) === 'object'
+); //  true
+console.log(
+  'typeof undefined это undefined: ',
+  getDataType(undefined) === 'undefined'
+); // true
 
 /** Задача 2 - написать функцию, которая скажет какое сейчас время года.
  *
@@ -32,24 +47,59 @@ console.log("typeof undefined это undefined: ", getDataType(undefined) === 'u
  */
 
 function getTimeOfYear(monthNumber) {
-    //код функции
+  //код функции
 }
 
-//тест кейсы
-console.log('-----Результаты тест кейсов по задаче 2:')
-console.log("Январь - это зима: ", getTimeOfYear(0 /* Январь */)?.toLowerCase() === 'зима') // true
-console.log("Февраль - это зима: ", getTimeOfYear(1 /* Февраль */)?.toLowerCase() === 'зима') // true
-console.log("Март - это весна: ", getTimeOfYear(2 /* Март */)?.toLowerCase() === 'весна') // true
-console.log("Апрель - это весна: ", getTimeOfYear(3 /* Апрель */)?.toLowerCase() === 'весна') // true
-console.log("Май - это весна: ", getTimeOfYear(4 /* Май */)?.toLowerCase() === 'весна') // true
-console.log("Июнь - это лето: ", getTimeOfYear(5 /* Июнь */)?.toLowerCase() === 'лето') // true
-console.log("Июль - это лето: ", getTimeOfYear(6 /* Июль */)?.toLowerCase() === 'лето') // true
-console.log("Август - это лето: ", getTimeOfYear(7 /* Август */)?.toLowerCase() === 'лето') // true
-console.log("Сентябрь - это осень: ", getTimeOfYear(8 /* Сентябрь */)?.toLowerCase() === 'осень') // true
-console.log("Октябрь - это осень: ", getTimeOfYear(9 /* Октябрь */)?.toLowerCase() === 'осень') // true
-console.log("Ноябрь - это осень: ", getTimeOfYear(10 /* Ноябрь */)?.toLowerCase() === 'осень') // true
-console.log("Декабрь - это зима: ", getTimeOfYear(11 /* Декабрь */)?.toLowerCase() === 'зима') // true
-
+//тест кейсы к задаче 2
+console.log('-----Результаты тест кейсов по задаче 2:');
+console.log(
+  'Январь - это зима: ',
+  getTimeOfYear(0 /* Январь */)?.toLowerCase() === 'зима'
+); // true
+console.log(
+  'Февраль - это зима: ',
+  getTimeOfYear(1 /* Февраль */)?.toLowerCase() === 'зима'
+); // true
+console.log(
+  'Март - это весна: ',
+  getTimeOfYear(2 /* Март */)?.toLowerCase() === 'весна'
+); // true
+console.log(
+  'Апрель - это весна: ',
+  getTimeOfYear(3 /* Апрель */)?.toLowerCase() === 'весна'
+); // true
+console.log(
+  'Май - это весна: ',
+  getTimeOfYear(4 /* Май */)?.toLowerCase() === 'весна'
+); // true
+console.log(
+  'Июнь - это лето: ',
+  getTimeOfYear(5 /* Июнь */)?.toLowerCase() === 'лето'
+); // true
+console.log(
+  'Июль - это лето: ',
+  getTimeOfYear(6 /* Июль */)?.toLowerCase() === 'лето'
+); // true
+console.log(
+  'Август - это лето: ',
+  getTimeOfYear(7 /* Август */)?.toLowerCase() === 'лето'
+); // true
+console.log(
+  'Сентябрь - это осень: ',
+  getTimeOfYear(8 /* Сентябрь */)?.toLowerCase() === 'осень'
+); // true
+console.log(
+  'Октябрь - это осень: ',
+  getTimeOfYear(9 /* Октябрь */)?.toLowerCase() === 'осень'
+); // true
+console.log(
+  'Ноябрь - это осень: ',
+  getTimeOfYear(10 /* Ноябрь */)?.toLowerCase() === 'осень'
+); // true
+console.log(
+  'Декабрь - это зима: ',
+  getTimeOfYear(11 /* Декабрь */)?.toLowerCase() === 'зима'
+); // true
 
 /** Задача 3 - Написать функцию, которая будет производить возведение числа в квадрат.
  * @name squareNumber
@@ -66,19 +116,30 @@ console.log("Декабрь - это зима: ", getTimeOfYear(11 /* Декаб
  */
 
 function squareNumber(num) {
-    //код функции
+  //код функции
 }
 
-//тест кейсы
-console.log('-----Результаты тест кейсов по задаче 3:')
-console.log('квадратный корень от 5 в квадрате = 5: ', Math.sqrt(squareNumber(5)) === 5) // true
-console.log('квадратный корень от 121 в квадрате = 121: ', Math.sqrt(squareNumber(121)) === 121) // true
-console.log('квадратный корень от 99 в квадрате = 99: ', Math.sqrt(squareNumber(99)) === 99) // true
-console.log('11 в квадрате = 121: ', squareNumber(11) === 121) // true
-console.log('100 в квадрате = 10000 (десять тысяч): ', squareNumber(100) === 10000) // true
-console.log('25 в квадрате = 625: ', squareNumber(25) === 625) // true
-console.log('21 в квадрате не равно 400: ', squareNumber(21) !== 400) // true
-
+//тест кейсы к задаче 3
+console.log('-----Результаты тест кейсов по задаче 3:');
+console.log(
+  'квадратный корень от 5 в квадрате = 5: ',
+  Math.sqrt(squareNumber(5)) === 5
+); // true
+console.log(
+  'квадратный корень от 121 в квадрате = 121: ',
+  Math.sqrt(squareNumber(121)) === 121
+); // true
+console.log(
+  'квадратный корень от 99 в квадрате = 99: ',
+  Math.sqrt(squareNumber(99)) === 99
+); // true
+console.log('11 в квадрате = 121: ', squareNumber(11) === 121); // true
+console.log(
+  '100 в квадрате = 10000 (десять тысяч): ',
+  squareNumber(100) === 10000
+); // true
+console.log('25 в квадрате = 625: ', squareNumber(25) === 625); // true
+console.log('21 в квадрате не равно 400: ', squareNumber(21) !== 400); // true
 
 /** Задача 4 - Написать функцию, которая вернет true или false, в зависимости от того, находится ли число в заданном диапазоне чисел.
  * Число должно быть меньше или равно, чем значение max, и больше или равно значения min.
@@ -97,14 +158,20 @@ console.log('21 в квадрате не равно 400: ', squareNumber(21) !==
  */
 
 function checkNumberInRange(num, min, max) {
-    //код функции
+  //код функции
 }
 
-console.log('-----Результаты тест кейсов по задаче 4:')
-console.log('5 находится между 5 и 5: ', checkNumberInRange(5, 5, 5)) // true
-console.log('утверждение, что 11 находится между 8 и 10 является ложным: ', checkNumberInRange(11, 8, 10) === false) // true
-console.log('8 в квадрате, находится между 8*7 и 8*9: ', checkNumberInRange(8 * 8, 8 * 7, 8 * 9)) // true
-
+//тест кейсы к задаче 4
+console.log('-----Результаты тест кейсов по задаче 4:');
+console.log('5 находится между 5 и 5: ', checkNumberInRange(5, 5, 5)); // true
+console.log(
+  'утверждение, что 11 находится между 8 и 10 является ложным: ',
+  checkNumberInRange(11, 8, 10) === false
+); // true
+console.log(
+  '8 в квадрате, находится между 8*7 и 8*9: ',
+  checkNumberInRange(8 * 8, 8 * 7, 8 * 9)
+); // true
 
 /**
  * Задача 5 - Компания по транспортировке мебели заносит любую мебель на 1-й этаж бесплатно,
@@ -121,22 +188,52 @@ console.log('8 в квадрате, находится между 8*7 и 8*9: ',
  */
 
 function getDeliveryPrice(floor) {
-    //код функции
+  //код функции
 }
 
-console.log('-----Результаты тест кейсов по задаче 5:')
-console.log('Подъем на 1 этаж - бесплатный: ', getDeliveryPrice(1) === 0)
-console.log('Подъем на 2 этаж будет стоить 200 рублей: ', getDeliveryPrice(2) === 200)
-console.log('Подъем на 3 этаж будет стоить 400 рублей: ', getDeliveryPrice(3) === 400)
-console.log('Подъем на 4 этаж будет стоить 600 рублей: ', getDeliveryPrice(4) === 600)
-console.log('Подъем на 5 этаж будет стоить 900 рублей: ', getDeliveryPrice(5) === 900)
-console.log('Подъем на 6 этаж будет стоить 1200 рублей: ', getDeliveryPrice(6) === 1200)
-console.log('Подъем на 7 этаж будет стоить 1500 рублей: ', getDeliveryPrice(7) === 1500)
-console.log('Подъем на 8 этаж будет стоить 1900 рублей: ', getDeliveryPrice(8) === 1900)
-console.log('Подъем на 9 этаж будет стоить 2300 рублей: ', getDeliveryPrice(9) === 2300)
-console.log('Подъем на 10 этаж будет стоить 2700 рублей: ', getDeliveryPrice(10) === 2700)
-console.log('Подъем на 14 этаж будет стоить 4300 рублей: ', getDeliveryPrice(14) === 4300)
-
+//тест кейсы к задаче 5
+console.log('-----Результаты тест кейсов по задаче 5:');
+console.log('Подъем на 1 этаж - бесплатный: ', getDeliveryPrice(1) === 0);
+console.log(
+  'Подъем на 2 этаж будет стоить 200 рублей: ',
+  getDeliveryPrice(2) === 200
+);
+console.log(
+  'Подъем на 3 этаж будет стоить 400 рублей: ',
+  getDeliveryPrice(3) === 400
+);
+console.log(
+  'Подъем на 4 этаж будет стоить 600 рублей: ',
+  getDeliveryPrice(4) === 600
+);
+console.log(
+  'Подъем на 5 этаж будет стоить 900 рублей: ',
+  getDeliveryPrice(5) === 900
+);
+console.log(
+  'Подъем на 6 этаж будет стоить 1200 рублей: ',
+  getDeliveryPrice(6) === 1200
+);
+console.log(
+  'Подъем на 7 этаж будет стоить 1500 рублей: ',
+  getDeliveryPrice(7) === 1500
+);
+console.log(
+  'Подъем на 8 этаж будет стоить 1900 рублей: ',
+  getDeliveryPrice(8) === 1900
+);
+console.log(
+  'Подъем на 9 этаж будет стоить 2300 рублей: ',
+  getDeliveryPrice(9) === 2300
+);
+console.log(
+  'Подъем на 10 этаж будет стоить 2700 рублей: ',
+  getDeliveryPrice(10) === 2700
+);
+console.log(
+  'Подъем на 14 этаж будет стоить 4300 рублей: ',
+  getDeliveryPrice(14) === 4300
+);
 
 /**
  * Задача 6 - Написать функцию, рассчитывающую сумму налога, которую необходимо заплатить, если налог начисляется
@@ -156,13 +253,29 @@ console.log('Подъем на 14 этаж будет стоить 4300 рубл
  * @description Примечание: используйте множественные условия if/else/else if
  */
 
-function getTaxesAmount(income){
-    //код функции
+function getTaxesAmount(income) {
+  //код функции
 }
 
-console.log('-----Результаты тест кейсов по задаче 6:')
-console.log('Налог на зарплату 12.500 будет 1.250 рублей: ', getTaxesAmount(12_500) === 1_250)
-console.log('Налог на зарплату 20.000 будет 3.000 рублей: ', getTaxesAmount(20_000) === 3_000)
-console.log('Налог на зарплату 50.500 будет 8.750 рублей: ', getTaxesAmount(50_000) === 8_750)
-console.log('Налог на зарплату 60.000 будет 10.500 рублей: ', getTaxesAmount(60_000) === 10_500)
-console.log('Налог на зарплату 100.000 будет 20.000 рублей: ', getTaxesAmount(100_000) === 20_000)
+//тест кейсы к задаче 6
+console.log('-----Результаты тест кейсов по задаче 6:');
+console.log(
+  'Налог на зарплату 12.500 будет 1.250 рублей: ',
+  getTaxesAmount(12_500) === 1_250
+);
+console.log(
+  'Налог на зарплату 20.000 будет 3.000 рублей: ',
+  getTaxesAmount(20_000) === 3_000
+);
+console.log(
+  'Налог на зарплату 50.500 будет 8.750 рублей: ',
+  getTaxesAmount(50_000) === 8_750
+);
+console.log(
+  'Налог на зарплату 60.000 будет 10.500 рублей: ',
+  getTaxesAmount(60_000) === 10_500
+);
+console.log(
+  'Налог на зарплату 100.000 будет 20.000 рублей: ',
+  getTaxesAmount(100_000) === 20_000
+);
