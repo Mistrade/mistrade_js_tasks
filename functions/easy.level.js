@@ -98,7 +98,6 @@ console.log('21 в квадрате не равно 400: ', squareNumber(21) !==
 
 function checkNumberInRange(num, min, max) {
     //код функции
-    return min <= num && max >= num
 }
 
 console.log('-----Результаты тест кейсов по задаче 4:')
@@ -123,26 +122,6 @@ console.log('8 в квадрате, находится между 8*7 и 8*9: ',
 
 function getDeliveryPrice(floor) {
     //код функции
-    let sum = 0
-
-    if (floor <= 1) {
-        return sum
-    }
-
-    for (let floorNum = 2; floorNum <= floor; floorNum++) {
-        if (floorNum >= 2 && floorNum <= 4) {
-            sum += 200
-            continue;
-        } else if (floorNum >= 5 && floorNum <= 7) {
-            sum += 300;
-            continue;
-        } else {
-            sum += 400
-        }
-    }
-
-
-    return sum
 }
 
 console.log('-----Результаты тест кейсов по задаче 5:')
@@ -179,19 +158,9 @@ console.log('Подъем на 14 этаж будет стоить 4300 рубл
 
 function getTaxesAmount(income){
     //код функции
-    if(income <= 15000){
-        return income * 0.1
-    } else if(income <= 30000){
-        return income * 0.15
-    } else if(income <= 60000){
-        return income * 0.175
-    } else {
-        return income * 0.2
-    }
 }
 
 console.log('-----Результаты тест кейсов по задаче 6:')
-
 console.log('Налог на зарплату 12.500 будет 1.250 рублей: ', getTaxesAmount(12_500) === 1_250)
 console.log('Налог на зарплату 20.000 будет 3.000 рублей: ', getTaxesAmount(20_000) === 3_000)
 console.log('Налог на зарплату 50.500 будет 8.750 рублей: ', getTaxesAmount(50_000) === 8_750)
