@@ -104,4 +104,96 @@ function checkNumberInRange(num, min, max) {
 console.log('-----Результаты тест кейсов по задаче 4:')
 console.log('5 находится между 5 и 5: ', checkNumberInRange(5, 5, 5)) // true
 console.log('утверждение, что 11 находится между 8 и 10 является ложным: ', checkNumberInRange(11, 8, 10) === false) // true
-console.log('8 в квадрате, находится между 8*7 и 8*9: ', checkNumberInRange(8*8, 8*7, 8*9)) // true
+console.log('8 в квадрате, находится между 8*7 и 8*9: ', checkNumberInRange(8 * 8, 8 * 7, 8 * 9)) // true
+
+
+/**
+ * Задача 5 - Компания по транспортировке мебели заносит любую мебель на 1-й этаж бесплатно,
+ * со 2-го по 4-й включительно - по 200руб., с 5-го по 7-й включительно - по 300руб.,
+ * а с 8-го и выше - по 400руб.
+ * Напишите функцию, которая рассчитает стоимость подъема мебели по указанному выше прайсу.
+ *
+ * @name getDeliveryPrice
+ * @function
+ *
+ * @param floor{number} - этаж, на который необходимо произвести подъем мебели.
+ *
+ * @return {number} - итоговая стоимость подъема мебели (целое число)
+ */
+
+function getDeliveryPrice(floor) {
+    //код функции
+    let sum = 0
+
+    if (floor <= 1) {
+        return sum
+    }
+
+    for (let floorNum = 2; floorNum <= floor; floorNum++) {
+        if (floorNum >= 2 && floorNum <= 4) {
+            sum += 200
+            continue;
+        } else if (floorNum >= 5 && floorNum <= 7) {
+            sum += 300;
+            continue;
+        } else {
+            sum += 400
+        }
+    }
+
+
+    return sum
+}
+
+console.log('-----Результаты тест кейсов по задаче 5:')
+console.log('Подъем на 1 этаж - бесплатный: ', getDeliveryPrice(1) === 0)
+console.log('Подъем на 2 этаж будет стоить 200 рублей: ', getDeliveryPrice(2) === 200)
+console.log('Подъем на 3 этаж будет стоить 400 рублей: ', getDeliveryPrice(3) === 400)
+console.log('Подъем на 4 этаж будет стоить 600 рублей: ', getDeliveryPrice(4) === 600)
+console.log('Подъем на 5 этаж будет стоить 900 рублей: ', getDeliveryPrice(5) === 900)
+console.log('Подъем на 6 этаж будет стоить 1200 рублей: ', getDeliveryPrice(6) === 1200)
+console.log('Подъем на 7 этаж будет стоить 1500 рублей: ', getDeliveryPrice(7) === 1500)
+console.log('Подъем на 8 этаж будет стоить 1900 рублей: ', getDeliveryPrice(8) === 1900)
+console.log('Подъем на 9 этаж будет стоить 2300 рублей: ', getDeliveryPrice(9) === 2300)
+console.log('Подъем на 10 этаж будет стоить 2700 рублей: ', getDeliveryPrice(10) === 2700)
+console.log('Подъем на 14 этаж будет стоить 4300 рублей: ', getDeliveryPrice(14) === 4300)
+
+
+/**
+ * Задача 6 - Написать функцию, рассчитывающую сумму налога, которую необходимо заплатить, если налог начисляется
+ * следующим образом:
+ * - Зарплата до 15.000 рублей включительно - 10%
+ * - Зарплата до 30.000 рублей включительно - 15%
+ * - Зарплата до 60.000 рублей включительно - 17.5%
+ * - Зарплата от 60.000 рублей включительно - 20%
+ *
+ * @name getTaxesAmount
+ * @function
+ *
+ * @param income{number} - Размер заработной платы
+ *
+ * @return number
+ *
+ * @description Примечание: используйте множественные условия if/else/else if
+ */
+
+function getTaxesAmount(income){
+    //код функции
+    if(income <= 15000){
+        return income * 0.1
+    } else if(income <= 30000){
+        return income * 0.15
+    } else if(income <= 60000){
+        return income * 0.175
+    } else {
+        return income * 0.2
+    }
+}
+
+console.log('-----Результаты тест кейсов по задаче 6:')
+
+console.log('Налог на зарплату 12.500 будет 1.250 рублей: ', getTaxesAmount(12_500) === 1_250)
+console.log('Налог на зарплату 20.000 будет 3.000 рублей: ', getTaxesAmount(20_000) === 3_000)
+console.log('Налог на зарплату 50.500 будет 8.750 рублей: ', getTaxesAmount(50_000) === 8_750)
+console.log('Налог на зарплату 60.000 будет 10.500 рублей: ', getTaxesAmount(60_000) === 10_500)
+console.log('Налог на зарплату 100.000 будет 20.000 рублей: ', getTaxesAmount(100_000) === 20_000)
